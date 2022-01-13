@@ -2,6 +2,7 @@ package com.example.myfirstjavaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,7 +34,12 @@ public class MainActivity extends AppCompatActivity {
 
                 int var3 = var1+var2;
 
-                tvResult.setText(String.valueOf(var3));
+//                tvResult.setText(String.valueOf(var3));
+
+//                Go to second Activity
+                Intent i = new Intent(MainActivity.this,SecoundActivity.class);
+                i.putExtra("result",var3);
+                startActivity(i);
             }
         });
     }
